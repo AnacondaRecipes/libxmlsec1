@@ -23,13 +23,13 @@ requirements:
     - libtool
   host:
     - icu
-    - libgcrypt
-    - libgpg-error
-    - libiconv  # [not linux]
-    - libtool    
+    - libgcrypt 1.9.3
+    - libgpg-error 1.42
+    - libiconv 1.16  # [not linux]
+    - libtool
     - libxml2 2.10
     - libxslt 1.1.37
-    - openssl
+    - openssl 1.1.1
     - xz
     - zlib 1.2.13
   run:
