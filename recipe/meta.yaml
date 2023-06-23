@@ -26,19 +26,16 @@ requirements:
     - libgcrypt 1.9.3
     - libgpg-error 1.42
     - libiconv 1.16  # [not linux]
-    - libtool
     - libxml2 {{ libxml2 }}
     - libxslt 1.1.37
     - openssl {{ openssl }}
     - xz
     - zlib 1.2.13
   run:
-    # libltdl is linked, which the libtool package provides.
-    # This is needed to enable dynamic loading support for xmlsec-crypto
-    # libraries (--enable-crypto-dl option).
-    - {{ pin_compatible('libtool') }}
-    - {{ pin_compatible('xz') }}
-    - {{ pin_compatible('zlib') }}
+    - libxslt
+    - libxml2
+    - libgcrypt
+    - openssl
 
 test:
   requires:
