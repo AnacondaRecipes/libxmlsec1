@@ -23,7 +23,6 @@ requirements:
     - libtool
   host:
     - icu
-    - libgcrypt 1.9.3
     - libgpg-error 1.42
     - libiconv 1.16  # [not linux]
     - libtool
