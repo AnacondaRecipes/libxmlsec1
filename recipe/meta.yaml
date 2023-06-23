@@ -32,9 +32,8 @@ requirements:
     - xz
     - zlib 1.2.13
   run:
-    - libxslt
-    - libxml2
-    - libgcrypt
+    - {{ pin_compatible('xz') }}
+    - {{ pin_compatible('zlib') }}
     - openssl
 
 test:
