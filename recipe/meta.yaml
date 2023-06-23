@@ -1,4 +1,4 @@
-{% set version = "1.2.32" %}
+{% set version = "1.2.37" %}
 
 package:
   name: libxmlsec1
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://www.aleksey.com/xmlsec/download/xmlsec1-{{ version }}.tar.gz
-  sha256: e383702853236004e5b08e424b8afe9b53fe9f31aaa7a5382f39d9533eb7c043
+  sha256: 5f8dfbcb6d1e56bddd0b5ec2e00a3d0ca5342a9f57c24dffde5c796b2be2871c
 
 build:
   number: 1
@@ -27,9 +27,9 @@ requirements:
     - libgpg-error 1.42
     - libiconv 1.16  # [not linux]
     - libtool
-    - libxml2 2.10
+    - libxml2 {{ libxml2 }}
     - libxslt 1.1.37
-    - openssl 1.1.1
+    - openssl 3.*
     - xz
     - zlib 1.2.13
   run:
@@ -50,7 +50,7 @@ test:
 about:
   home: https://www.aleksey.com/xmlsec/
   license: MIT and MPL-1.1
-  license_family: MIT
+  license_family: Other
   license_file: Copyright
   summary: XML Security Library
   description: |
