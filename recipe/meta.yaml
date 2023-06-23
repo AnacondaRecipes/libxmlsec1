@@ -29,7 +29,7 @@ requirements:
     - libtool
     - libxml2 {{ libxml2 }}
     - libxslt 1.1.37
-    - openssl 3.*
+    - openssl {{ openssl }}
     - xz
     - zlib 1.2.13
   run:
