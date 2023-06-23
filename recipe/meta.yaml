@@ -32,13 +32,6 @@ requirements:
     - openssl {{ openssl }}
     - xz
     - zlib 1.2.13
-  run:
-    # libltdl is linked, which the libtool package provides.
-    # This is needed to enable dynamic loading support for xmlsec-crypto
-    # libraries (--enable-crypto-dl option).
-    - {{ pin_compatible('libtool') }}
-    - {{ pin_compatible('xz') }}
-    - {{ pin_compatible('zlib') }}
 
 test:
   requires:
