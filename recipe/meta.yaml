@@ -31,6 +31,8 @@ requirements:
     - openssl {{ openssl }}
     - xz
     - zlib 1.2.13
+  run:
+    - libtool
 
 test:
   requires:
