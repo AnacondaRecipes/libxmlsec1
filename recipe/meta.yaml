@@ -25,7 +25,7 @@ requirements:
     - libgcrypt 1.9.3
     - libgpg-error 1.42  # [linux]
     - libtool
-    - libxml2 2.10
+    - libxml2 {{ libxml2 }}
     - libxslt 1.1.37
     - openssl {{ openssl }}
   run:
