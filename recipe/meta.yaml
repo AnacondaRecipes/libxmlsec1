@@ -22,15 +22,11 @@ requirements:
     - make
     - libtool
   host:
-    - icu
-    - libgpg-error 1.42
-    - libiconv 1.16  # [not linux]
+    - libgpg-error 1.42 # [linux]
     - libtool
     - libxml2 {{ libxml2 }}
     - libxslt 1.1.37
     - openssl {{ openssl }}
-    - xz
-    - zlib 1.2.13
   run:
     - libtool
 
