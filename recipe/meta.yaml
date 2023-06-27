@@ -22,6 +22,7 @@ requirements:
     - make
     - libtool
   host:
+    - libgcrypt 1.9.3
     - libgpg-error 1.42 # [linux]
     - libtool
     - libxml2 {{ libxml2 }}
