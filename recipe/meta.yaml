@@ -43,7 +43,7 @@ test:
 
 about:
   home: https://www.aleksey.com/xmlsec/
-  license: MIT and MPL-1.1
+  license: MIT
   license_family: MIT
   license_file: Copyright
   summary: XML Security Library
