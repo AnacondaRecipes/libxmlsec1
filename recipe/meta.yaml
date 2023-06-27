@@ -48,3 +48,9 @@ about:
     The library supports major XML security standards.
   dev_url: https://github.com/lsh123/xmlsec
   doc_url: https://www.aleksey.com/xmlsec/documentation.html
+
+extra:
+  skip-lints:
+    - host_section_needs_exact_pinnings
+    - build_tools_must_be_in_build
+
