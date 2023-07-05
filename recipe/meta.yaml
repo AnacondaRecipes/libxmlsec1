@@ -24,7 +24,7 @@ requirements:
   host:
     - libgcrypt 1.9.3
     - libgpg-error 1.42  # [linux]
-    - libtool
+    - libtool 2.4.6
     - libxml2 {{ libxml2 }}
     - libxslt 1.1.37
     - openssl {{ openssl }}
