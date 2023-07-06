@@ -14,7 +14,6 @@ export LIBXML_LIBS="-lxml2"
     --disable-docs \
     --with-openssl="${PREFIX}" \
     --with-libxml="${PREFIX}" \
-    --with-xslt="${PREFIX}" \
     --with-gcrypt="${PREFIX}"
 make -j${CPU_COUNT} ${VERBOSE_AT}
 make check

@@ -1,4 +1,4 @@
-{% set version = "1.2.32" %}
+{% set version = "1.2.37" %}
 
 package:
   name: libxmlsec1
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://www.aleksey.com/xmlsec/download/xmlsec1-{{ version }}.tar.gz
-  sha256: e383702853236004e5b08e424b8afe9b53fe9f31aaa7a5382f39d9533eb7c043
+  sha256: 5f8dfbcb6d1e56bddd0b5ec2e00a3d0ca5342a9f57c24dffde5c796b2be2871c
 
 build:
-  number: 1
+  number: 0
   # libgpg-error and libgcrypt aren't available on s390x
   skip: true  # [win or (linux and s390x)]
   run_exports:
@@ -22,23 +22,17 @@ requirements:
     - make
     - libtool
   host:
-    - icu
     - libgcrypt 1.9.3
-    - libgpg-error 1.42
-    - libiconv 1.16  # [not linux]
-    - libtool
-    - libxml2 2.10
+    - libgpg-error 1.42  # [linux]
+    - libtool 2.4.6
+    - libxml2 {{ libxml2 }}
     - libxslt 1.1.37
-    - openssl 1.1.1
-    - xz
-    - zlib 1.2.13
+    - openssl {{ openssl }}
   run:
     # libltdl is linked, which the libtool package provides.
     # This is needed to enable dynamic loading support for xmlsec-crypto
     # libraries (--enable-crypto-dl option).
     - {{ pin_compatible('libtool') }}
-    - {{ pin_compatible('xz') }}
-    - {{ pin_compatible('zlib') }}
 
 test:
   requires:
@@ -49,7 +43,7 @@ test:
 
 about:
   home: https://www.aleksey.com/xmlsec/
-  license: MIT and MPL-1.1
+  license: MIT
   license_family: MIT
   license_file: Copyright
   summary: XML Security Library
@@ -58,3 +52,7 @@ about:
     The library supports major XML security standards.
   dev_url: https://github.com/lsh123/xmlsec
   doc_url: https://www.aleksey.com/xmlsec/documentation.html
+
+extra:
+  skip-lints:  # due to the libtool issue explained above
+    - build_tools_must_be_in_build
