@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://www.aleksey.com/xmlsec/download/xmlsec1-{{ version }}.tar.gz
+  url: https://github.com/lsh123/xmlsec/releases/download/xmlsec-{{ version | replace(".", "_") }}/xmlsec1-{{ version }}.tar.gz
   sha256: 9de8cf8d7d2e288a9cef205cc6cb93c926a67dadfaf44aaff76ed63c28ce9902
 
 build:
