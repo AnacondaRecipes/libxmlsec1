@@ -26,7 +26,7 @@ requirements:
     - libgpg-error 1.42  # [linux]
     - libtool 2.4.6
     - libxml2 {{ libxml2 }}
-    - libxslt 1.1.41
+    - libxslt {{ libxslt }}
     - openssl {{ openssl }}
   run:
     # libltdl is linked, which the libtool package provides.
