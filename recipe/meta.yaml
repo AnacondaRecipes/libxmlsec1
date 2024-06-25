@@ -26,7 +26,7 @@ requirements:
     - libgpg-error 1.42  # [linux]
     - libtool 2.4.6
     - libxml2 {{ libxml2 }}
-    - libxslt 1.1.37
+    - libxslt 1.1.41
     - openssl {{ openssl }}
   run:
     # libltdl is linked, which the libtool package provides.
@@ -48,7 +48,7 @@ about:
   license_file: Copyright
   summary: XML Security Library
   description: |
-    XML Security Library is a C library based on LibXML2. 
+    XML Security Library is a C library based on LibXML2.
     The library supports major XML security standards.
   dev_url: https://github.com/lsh123/xmlsec
   doc_url: https://www.aleksey.com/xmlsec/documentation.html
