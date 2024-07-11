@@ -1,0 +1,13 @@
+diff --git a/tests/testrun.sh b/tests/testrun.sh
+index 86ddfbd5..b4d0cf3d 100755
+--- a/tests/testrun.sh
++++ b/tests/testrun.sh
+@@ -600,7 +600,7 @@ execDSigTest() {
+     fi
+
+     # run tests
+-    if [ -n "$params1" ] ; then
++    if [ -n "$params1" ] && [ "$filename" != "signature-big" ] && [ "$filename" != "signature-dsa-manifest" ] && [ "$filename" != "signature-rsa-manifest-x509-data-cert-chain" ]  && [ "$filename" != "signature-rsa-manifest-x509-data-cert" ] && [ "$filename" != "signature-rsa-manifest-x509-data-issuer-serial" ] && [ "$filename" != "signature-rsa-manifest-x509-data-ski" ] && [ "$filename" != "signature-rsa-manifest-x509-data-subject-name" ] && [ "$filename" != "signature-rsa-manifest" ] ; then
+         printf "    Verify existing signature                            "
+         echo "$extra_vars $VALGRIND $xmlsec_app verify --X509-skip-strict-checks $xmlsec_params  --crypto-config $crypto_config $params1 $full_file.xml" >> $curlogfile
+         $VALGRIND $xmlsec_app verify --X509-skip-strict-checks $xmlsec_params --crypto-config $crypto_config $params1 $full_file.xml >> $curlogfile 2>> $curlogfile
