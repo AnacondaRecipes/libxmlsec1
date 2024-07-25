@@ -7,9 +7,6 @@ package:
 source:
   url: https://github.com/lsh123/xmlsec/releases/download/{{ version }}/xmlsec1-{{ version }}.tar.gz
   sha256: 2ffd4ad1f860ec93e47a680310ab2bc94968bd07566e71976bd96133d9504917
-  # patches:
-  #   # - patches/0001_ignore_tests.patch
-  #   - patches/0002_test.patch
 build:
   number: 0
   # libgpg-error and libgcrypt aren't available on s390x
