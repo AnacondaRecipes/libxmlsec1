@@ -6,7 +6,6 @@ cp -r ${BUILD_PREFIX}/share/libtool/build-aux/config.* .
 # xml2-config add -lz and -llzma to the linker flags, resulting in overlinking
 # only libxml2 needs to be linked
 export LIBXML_LIBS="-lxml2"
-
 ./configure \
     --prefix=$PREFIX \
     --enable-shared \
